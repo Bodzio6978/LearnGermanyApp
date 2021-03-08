@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#2962ff</color>
+    <color name="primaryVariant">#1565c0</color>
+    <color name="secondary">#6200EE</color>
+    <color name="secondaryVariant">#3700B3</color>
+    <color name="darkGrey">#121212</color>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+    <color name="error">#b00020</color>
+    <color name="toolbar">@color/primary</color>
+    <color name="lightGrey">#1E1E1E</color>
+    <color name="divider">#4B4B4B</color>
+    <color name="almostWhite">#A1A1A1</color>
+    <color name="editTextColor">@color/white</color>
+    <color name="notification">@color/primary</color>
+
+</resources>
