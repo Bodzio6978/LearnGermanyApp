@@ -62,8 +62,7 @@
         <TextView
             android:id="@+id/login_notification"
             style="@style/notification"
-            android:layout_alignParentBottom="true"
-            />
+            android:layout_alignParentBottom="true" />
 
     </RelativeLayout>
 

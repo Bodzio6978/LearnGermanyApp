@@ -18,9 +18,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/bottomNavigation"
-        app:itemIconTint="@drawable/tab_color"
-        app:itemTextColor="@drawable/tab_color"
+        app:itemIconTint="@drawable/nav_item_color_selected"
+        app:itemTextColor="@drawable/nav_item_color_selected"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/main_bottom" />
+
+<!--    app:itemIconTint="@drawable/tab_color"-->
+<!--    app:itemTextColor="@drawable/tab_color"-->
 
 </RelativeLayout>

@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/ic_home" android:icon="@drawable/ic_home" android:title="Quizzes"/>
-    <item android:id="@+id/ic_search" android:icon="@drawable/ic_search" android:title="Find Quizzes"/>
-    <item android:id="@+id/ic_add" android:icon="@drawable/ic_add" android:title="Add Quiz"/>
-    <item android:id="@+id/ic_settings" android:icon="@drawable/ic_settings" android:title="Settings"/>
+    <item
+        android:id="@+id/ic_home"
+        android:icon="@drawable/home_icon"
+        android:title="Quizzes" />
+    <item
+        android:id="@+id/ic_search"
+        android:icon="@drawable/search_icon"
+        android:title="Find Quizzes" />
+    <item
+        android:id="@+id/ic_add"
+        android:icon="@drawable/add_icon"
+        android:title="Add Quiz" />
+    <item
+        android:id="@+id/ic_settings"
+        android:icon="@drawable/settings_icon"
+        android:title="Settings" />
 
 </menu>

@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         if (auth==null){
             val intent: Intent = Intent(this,AuthActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         val home : HomeFragment = HomeFragment()
