@@ -12,8 +12,8 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.core.animation.addListener
 import androidx.fragment.app.Fragment
-import com.gmail.Bodziowaty6978.AuthActivity
 import com.gmail.Bodziowaty6978.R
+import com.gmail.Bodziowaty6978.UsernameActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -86,7 +86,7 @@ class RegisterFragment : Fragment() {
                 set.start()
             }.addOnCompleteListener {
                 if(it.isSuccessful){
-                    val intent : Intent = Intent(activity,AuthActivity::class.java)
+                    val intent : Intent = Intent(activity,UsernameActivity::class.java)
                     startActivity(intent)
                     activity?.finish()
                 }

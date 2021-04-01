@@ -58,13 +58,13 @@
             android:paddingStart="10dp" />
 
         <Button
+            android:id="@+id/register_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/register_confirm"
             android:layout_marginStart="14dp"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="14dp"
-            android:id="@+id/register_button"
             android:background="@drawable/button"
             android:elevation="6dp"
             android:padding="15dp"
@@ -72,9 +72,9 @@
             android:textSize="16sp" />
 
         <TextView
-            style="@style/notification"
             android:id="@+id/register_notification"
-            android:layout_alignParentBottom="true"/>
+            style="@style/notification"
+            android:layout_alignParentBottom="true" />
 
 
     </RelativeLayout>

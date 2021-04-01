@@ -17,6 +17,9 @@
     <string name="quiz_size_notification">Please Make Sure You Have At Least 5 Words In Your Quiz</string>
     <string name="quiz_finished">Your Quiz Has Been Added To Your Account</string>
     <string name="title_length_notification">Please Make Sure Your Title Is At Least 6 Characters Long</string>
+    <string name="username_no_value_notification">Please Enter Your Username</string>
+    <string name="username_length_notification">Please Make Sure Your Username Is At Least 6 Characters Long And No Longer Than 24 Characters</string>
+    <string name="username_exists_notification">There Is Already User With This Username</string>
 
 
 </resources>

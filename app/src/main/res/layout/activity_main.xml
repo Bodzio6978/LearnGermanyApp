@@ -23,7 +23,7 @@
         app:labelVisibilityMode="labeled"
         app:menu="@menu/main_bottom" />
 
-<!--    app:itemIconTint="@drawable/tab_color"-->
-<!--    app:itemTextColor="@drawable/tab_color"-->
+    <!--    app:itemIconTint="@drawable/tab_color"-->
+    <!--    app:itemTextColor="@drawable/tab_color"-->
 
 </RelativeLayout>

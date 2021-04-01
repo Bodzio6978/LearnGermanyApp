@@ -20,6 +20,7 @@
     <color name="bottomText">@color/almostWhite</color>
     <color name="finish_quiz">@color/lighterGrey</color>
     <color name="card_word">@color/lighterGrey</color>
+    <color name="username_background">@color/darkGrey</color>
 
 
 </resources>

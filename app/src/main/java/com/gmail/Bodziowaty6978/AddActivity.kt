@@ -21,7 +21,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gmail.Bodziowaty6978.Adapters.AddRecyclerAdapter
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.Dispatchers
@@ -196,19 +199,28 @@ class AddActivity : AppCompatActivity(), View.OnClickListener {
         } else if (germanWords.size < 5) {
             notification.text = getString(R.string.quiz_size_notification)
             set.start()
-        }else if(title.length <= 5){
+        } else if (title.length <= 5) {
             notification.text = getString(R.string.title_length_notification)
             set.start()
-        }else {
+        } else {
             notification.text = getString(R.string.quiz_finished)
             set.start()
-            val ref = database.getReference("users").child(userId).child("quizzes").child(userId).child(title)
-            ref.child("english_words").setValue(englishWords)
-            ref.child("german_words").setValue(germanWords)
-            quizTitle.text.clear()
-            germanWords.clear()
-            englishWords.clear()
-            recycler.adapter?.notifyDataSetChanged()
+            val username = database.reference.child("users").child(userId).child("username")
+            username.addValueEventListener(object : ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val quizzesRef = database.getReference("quizzes").child(snapshot.value.toString()).child(title)
+                    quizzesRef.child("english_words").setValue(englishWords)
+                    quizzesRef.child("german_words").setValue(germanWords)
+                    database.reference.child("followed_quizzes").child(userId).child(snapshot.value.toString()).child(title).setValue(true)
+                    quizTitle.text.clear()
+                    germanWords.clear()
+                    englishWords.clear()
+                    recycler.adapter?.notifyDataSetChanged()
+                }
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+            })
         }
     }
 

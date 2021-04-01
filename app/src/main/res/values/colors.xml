@@ -23,5 +23,6 @@
     <color name="bottomText">#808080</color>
     <color name="finish_quiz">@color/white</color>
     <color name="card_word">@color/white</color>
+    <color name="username_background">@color/primary</color>
 
 </resources>

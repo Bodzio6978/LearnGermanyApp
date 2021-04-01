@@ -204,9 +204,8 @@
             android:tint="@color/primary" />
 
         <TextView
-            style="@style/notification"
-            android:fitsSystemWindows="true"
             android:id="@+id/add_notification"
+            style="@style/notification"
             android:layout_alignParentBottom="true"/>
 
     </RelativeLayout>
@@ -245,7 +244,6 @@
 
 
     </com.google.android.material.navigation.NavigationView>
-
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
