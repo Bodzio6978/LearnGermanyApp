@@ -206,7 +206,7 @@
         <TextView
             android:id="@+id/add_notification"
             style="@style/notification"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true" />
 
     </RelativeLayout>
 
@@ -237,7 +237,6 @@
                 android:layout_below="@+id/add_list"
                 android:layout_margin="4dp"
                 android:elevation="6dp"
-                tools:itemCount="5"
                 tools:listitem="@layout/word_layout" />
 
         </RelativeLayout>

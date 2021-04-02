@@ -211,7 +211,7 @@ class AddActivity : AppCompatActivity(), View.OnClickListener {
                     val quizzesRef = database.getReference("quizzes").child(snapshot.value.toString()).child(title)
                     quizzesRef.child("english_words").setValue(englishWords)
                     quizzesRef.child("german_words").setValue(germanWords)
-                    database.reference.child("followed_quizzes").child(userId).child(snapshot.value.toString()).child(title).setValue(true)
+                    database.reference.child("followed_quizzes").child(userId).child(snapshot.value.toString()).child(title).setValue(title)
                     quizTitle.text.clear()
                     germanWords.clear()
                     englishWords.clear()

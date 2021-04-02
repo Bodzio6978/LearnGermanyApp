@@ -14,6 +14,7 @@
     <color name="almostWhite">#8c8c8c</color>
 
     <color name="divider">#4B4B4B</color>
+    <color name="author">@color/lighterGrey</color>
     <color name="text">@color/darkGrey</color>
     <color name="editTextColor">@color/white</color>
     <color name="notification">@color/primary</color>
