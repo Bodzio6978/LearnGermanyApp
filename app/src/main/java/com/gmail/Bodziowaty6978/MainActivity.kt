@@ -25,10 +25,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var userId: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        
         instance = FirebaseAuth.getInstance()
         database = Firebase.database("https://learn-germany-app-default-rtdb.europe-west1.firebasedatabase.app/")
 

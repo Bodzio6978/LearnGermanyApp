@@ -15,12 +15,12 @@
         <item name="colorError">@color/error</item>
         <item name="fontWeight">700</item>
         <item name="android:statusBarColor">@color/primary</item>
-<!--        <item name="fontFamily">@font/montserratmedium</item>-->
+        <item name="fontFamily">@font/montserratmedium</item>
     </style>
 
     <style name="TabLayoutStyle" parent="Widget.MaterialComponents.TabLayout">
         <item name="tabBackground">@color/primary</item>
-        <item name="tabTextColor">@color/almostWhite</item>
+        <item name="tabTextColor">@color/lightestGrey</item>
         <item name="fontFamily">@font/montserratmedium</item>
         <item name="android:textSize">10sp</item>
         <item name="tabSelectedTextColor">@color/white</item>

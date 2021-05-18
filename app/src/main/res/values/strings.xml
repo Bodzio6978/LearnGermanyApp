@@ -20,6 +20,9 @@
     <string name="username_no_value_notification">Please Enter Your Username</string>
     <string name="username_length_notification">Please Make Sure Your Username Is At Least 6 Characters Long And No Longer Than 24 Characters</string>
     <string name="username_exists_notification">There Is Already User With This Username</string>
+    <string name="play_hint">German translation of the word above</string>
+    <string name="play_upper">Upper Case</string>
+    <string name="play_congratulations">Congratulations, you have finished your quiz</string>
 
 
 </resources>

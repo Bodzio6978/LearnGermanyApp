@@ -17,7 +17,7 @@
     <color name="notification">@color/white</color>
     <color name="bottomNavigation">@color/lightGrey</color>
     <color name="bottomTextSelected">@color/white</color>
-    <color name="bottomText">@color/almostWhite</color>
+    <color name="bottomText">@color/lightestGrey</color>
     <color name="finish_quiz">@color/lighterGrey</color>
     <color name="card_word">@color/lighterGrey</color>
     <color name="username_background">@color/darkGrey</color>

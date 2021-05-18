@@ -25,6 +25,8 @@ class HomeRecyclerAdapter(
         init {
             play.setOnClickListener {
                 val intent: Intent = Intent(itemView.context, QuizActivity::class.java)
+                intent.putExtra("title",titles[adapterPosition])
+                intent.putExtra("author",authors[adapterPosition])
                 itemView.context.startActivity(intent)
             }
 

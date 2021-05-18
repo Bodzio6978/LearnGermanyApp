@@ -14,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
+            android:padding="10dp"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="14dp"
             android:background="@drawable/edit_text"
@@ -29,6 +30,7 @@
             android:id="@+id/register_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:layout_below="@+id/register_email"
             android:layout_marginStart="14dp"
             android:layout_marginTop="30dp"
@@ -48,6 +50,7 @@
             android:layout_below="@+id/register_password"
             android:layout_marginStart="14dp"
             android:layout_marginTop="30dp"
+            android:padding="10dp"
             android:layout_marginEnd="14dp"
             android:background="@drawable/edit_text"
             android:drawableStart="@drawable/ic_password"
@@ -67,7 +70,7 @@
             android:layout_marginEnd="14dp"
             android:background="@drawable/button"
             android:elevation="6dp"
-            android:padding="15dp"
+            android:padding="10dp"
             android:text="REGISTER"
             android:textSize="16sp" />
 

@@ -196,7 +196,7 @@ class AddActivity : AppCompatActivity(), View.OnClickListener {
         if (title.isNullOrEmpty()) {
             notification.text = getString(R.string.quiz_title_notification)
             set.start()
-        } else if (germanWords.size < 5) {
+        } else if (germanWords.size < 1) {
             notification.text = getString(R.string.quiz_size_notification)
             set.start()
         } else if (title.length <= 5) {

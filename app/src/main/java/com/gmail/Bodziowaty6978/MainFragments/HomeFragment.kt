@@ -20,11 +20,11 @@ import com.google.firebase.ktx.Firebase
 
 class HomeFragment : Fragment() {
 
-    lateinit var recycler : RecyclerView
+    lateinit var recycler: RecyclerView
 
-    lateinit var database : FirebaseDatabase
-    lateinit var instance : FirebaseAuth
-    lateinit var userId : String
+    lateinit var database: FirebaseDatabase
+    lateinit var instance: FirebaseAuth
+    lateinit var userId: String
 
     private var titles = mutableListOf<String>()
     private var authors = mutableListOf<String>()
@@ -46,17 +46,20 @@ class HomeFragment : Fragment() {
 
         recycler = view.findViewById(R.id.home_rv)
         recycler.layoutManager = LinearLayoutManager(view.context)
-        recycler.adapter = HomeRecyclerAdapter(titles,authors)
+        recycler.adapter = HomeRecyclerAdapter(titles, authors)
 
-        addQuizzes()
-
+        if (authors.isEmpty()) {
+            addQuizzes()
+        }
         return view
     }
 
-    private fun addQuizzes(){
+    private fun addQuizzes() {
+        authors.clear()
+        titles.clear()
         val followedRef = database.reference.child("followed_quizzes").child(userId)
 
-        followedRef.addListenerForSingleValueEvent(object : ValueEventListener {
+        followedRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 for (data in snapshot.children) {
                     for (quiz in data.children) {
@@ -65,6 +68,7 @@ class HomeFragment : Fragment() {
                     }
                 }
                 recycler.adapter?.notifyDataSetChanged()
+
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -73,4 +77,5 @@ class HomeFragment : Fragment() {
         })
 
     }
+
 }

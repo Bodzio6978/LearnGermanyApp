@@ -1,9 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".QuizActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/play_top_bar">
+
+        <TextView
+            android:id="@+id/play_english"
+            android:layout_marginStart="54dp"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/play_words_left"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/text"
+            android:textSize="20sp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/play_words_left"
+            android:text="Words left:"
+            android:textSize="16sp"
+            android:textColor="@color/text"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/play_words_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textSize="16sp"
+            android:textColor="@color/text"
+            android:padding="5dp"/>
+
+        <Button
+            android:id="@+id/play_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textSize="16sp"
+            android:text="Exit quiz"
+            android:layout_below="@+id/play_english"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:background="@drawable/button"
+            android:layout_marginTop="30dp"/>
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/play_german"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/play_top_bar"
+        android:background="@drawable/edit_text"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:elevation="8dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/text"
+        android:hint="@string/play_hint"/>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/play_specialChars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/play_german"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/play_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:text="ä"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/play_o"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:text="ö"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/play_u"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:text="ü"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/play_B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:text="ß"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/play_derDieDas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/play_specialChars"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false">
+
+        <Button
+            android:id="@+id/play_der"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:text="@string/der_lower"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/play_die"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:text="@string/die_lower"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/play_das"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:text="@string/das_lower"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/play_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/play_derDieDas"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/play_upper" />
+
+    <ImageButton
+        android:id="@+id/play_check"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/play_switch"
+        android:src="@drawable/ic_baseline_check_circle_48"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:tint="@color/green"/>
+
+    <ImageButton
+        android:id="@+id/play_next"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/play_switch"
+        android:src="@drawable/ic_baseline_play_circle_48"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:tint="@color/primary"/>
+
+    <ImageButton
+        android:id="@+id/play_cancel"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/play_switch"
+        android:src="@drawable/ic_baseline_cancel_48"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:tint="@color/red"/>
+
+    <TextView
+        android:id="@+id/play_notification"
+        style="@style/notification"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>

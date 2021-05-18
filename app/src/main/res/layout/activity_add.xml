@@ -34,7 +34,7 @@
                     android:hint="Quiz Title"
                     android:inputType="textEmailAddress"
                     android:padding="10dp"
-                    android:textColorHint="@color/almostWhite" />
+                    android:textColorHint="@color/lightestGrey" />
 
                 <ImageButton
                     android:id="@+id/add_finish"
@@ -200,7 +200,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="15dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_baseline_add_circle_36"
+            android:src="@drawable/ic_baseline_add_circle_48"
             android:tint="@color/primary" />
 
         <TextView

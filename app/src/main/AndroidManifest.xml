@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnGermany"
         android:windowSoftInputMode="adjustResize">
-        <activity android:name=".QuizActivity"></activity>
+        <activity android:name=".QuizActivity"
+            android:windowSoftInputMode="adjustResize"/>
+
         <activity
             android:name=".UsernameActivity"
             android:windowSoftInputMode="adjustResize" />
