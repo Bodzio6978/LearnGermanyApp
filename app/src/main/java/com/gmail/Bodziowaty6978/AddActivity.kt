@@ -2,6 +2,8 @@ package com.gmail.Bodziowaty6978
 
 import android.animation.Animator
 import android.animation.AnimatorInflater
+import android.content.Context
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -68,6 +70,10 @@ class AddActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add)
+
+        if (isDarkThemeOn()) {
+            window.statusBarColor = ContextCompat.getColor(this, R.color.lightGrey)
+        }
 
         toolbar = findViewById(R.id.add_toolbar)
         drawer = findViewById(R.id.add_drawer)
@@ -263,5 +269,9 @@ class AddActivity : AppCompatActivity(), View.OnClickListener {
                 germanWordEditText.append("Das")
             }
         }
+    }
+    private fun Context.isDarkThemeOn(): Boolean {
+        return resources.configuration.uiMode and
+                Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
     }
 }

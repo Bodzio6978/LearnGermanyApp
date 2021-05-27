@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         instance = FirebaseAuth.getInstance()
         database = Firebase.database("https://learn-germany-app-default-rtdb.europe-west1.firebasedatabase.app/")
 
+
         if (instance.currentUser == null) {
             val intent: Intent = Intent(this, AuthActivity::class.java)
             startActivity(intent)

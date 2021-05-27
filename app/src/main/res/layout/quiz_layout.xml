@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
     android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
     android:layout_marginEnd="10dp"
     android:clickable="true"
     android:elevation="8dp"
@@ -18,37 +18,37 @@
 
         <TextView
             android:id="@+id/quiz_title"
-            android:layout_toStartOf="@+id/quiz_play"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
-            android:paddingTop="5dp"
+            style="@style/TextInput_ListItemTitles_ImportantText_Snippet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="@color/text"
-            />
+            android:layout_toStartOf="@+id/quiz_play"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp"
+            android:textColor="@color/text" />
+
         <TextView
             android:id="@+id/quiz_author"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
-            android:paddingBottom="5dp"
+            style="@style/Paragraph_Secondary_Caption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/quiz_title"
-            android:textSize="14sp"
-            android:textColor="@color/author"
-            />
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/author" />
 
         <ImageButton
             android:id="@+id/quiz_play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_baseline_play_arrow_24"
             android:layout_alignParentEnd="true"
-            android:tint="@color/primary"
             android:layout_centerVertical="true"
-            android:padding="10dp"/>
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            android:tint="@color/primary"
+            android:contentDescription="@string/play_quiz" />
 
 
     </RelativeLayout>

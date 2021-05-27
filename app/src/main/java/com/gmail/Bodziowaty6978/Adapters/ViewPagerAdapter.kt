@@ -2,11 +2,9 @@ package com.gmail.Bodziowaty6978.Adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class viewPagerAdapter(supportFragmentManager: FragmentActivity) : FragmentStateAdapter(supportFragmentManager) {
+class ViewPagerAdapter(supportFragmentManager: FragmentActivity) : FragmentStateAdapter(supportFragmentManager) {
 
     private val mFragmentList = ArrayList<Fragment>()
     private val mFragmentTitleList = ArrayList<String>()

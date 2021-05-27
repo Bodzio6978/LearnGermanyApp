@@ -126,6 +126,9 @@ class QuizActivity : AppCompatActivity(), View.OnClickListener {
         exit.setOnClickListener {
             closeQuiz()
         }
+        cancel.setOnClickListener {
+            cancelWord()
+        }
         upperCase.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 a.text = "Ä"
@@ -147,6 +150,23 @@ class QuizActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    private fun cancelWord(){
+        showCorrectWord()
+        val textToShow = "$currentGermanWord was a correct answer"
+        changeVisibility()
+        germanWord.setBackgroundResource(R.drawable.edit_text_incorrect)
+        notification.text = textToShow
+        set.start()
+        shuffleOrder.add(shuffleOrder.size, shuffleOrder[currentPosition])
+        shuffleOrder.removeAt(currentPosition)
+
+    }
+
+    private fun showCorrectWord(){
+        val wordTranslation = "${englishWord.text} - $currentGermanWord"
+        englishWord.text = wordTranslation
+    }
+
     private fun createShuffleOrder() {
         for (number in 0 until englishWords.size) {
             shuffleOrder.add(number)
@@ -163,8 +183,7 @@ class QuizActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun checkIfWordIsCorrect() {
-        val wordTranslation = "${englishWord.text} - $currentGermanWord"
-        englishWord.text = wordTranslation
+        showCorrectWord()
         if (germanWord.text.toString() == currentGermanWord) {
             val textToShow = "${germanWord.text} was correct"
             notification.text = textToShow

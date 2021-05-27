@@ -4,18 +4,18 @@
     <item
         android:id="@+id/ic_home"
         android:icon="@drawable/home_icon"
-        android:title="Quizzes" />
+        android:title="@string/menu_quizzes" />
     <item
         android:id="@+id/ic_search"
         android:icon="@drawable/search_icon"
-        android:title="Find Quizzes" />
+        android:title="@string/menu_find_quizzes" />
     <item
         android:id="@+id/ic_add"
         android:icon="@drawable/add_icon"
-        android:title="Add Quiz" />
+        android:title="@string/menu_add_quiz" />
     <item
         android:id="@+id/ic_settings"
         android:icon="@drawable/settings_icon"
-        android:title="Settings" />
+        android:title="@string/menu_settings" />
 
 </menu>

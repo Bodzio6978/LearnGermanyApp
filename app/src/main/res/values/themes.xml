@@ -8,24 +8,44 @@
         <item name="colorSecondary">@color/secondary</item>
         <item name="colorSurface">@color/black</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="fontWeight">400</item>
         <item name="colorOnSecondary">@color/black</item>
         <item name="colorOnBackground">@color/black</item>
         <item name="colorOnSurface">@color/black</item>
         <item name="colorOnError">@color/error</item>
         <item name="colorError">@color/error</item>
-        <item name="fontWeight">700</item>
         <item name="android:statusBarColor">@color/primary</item>
         <item name="fontFamily">@font/montserratmedium</item>
     </style>
 
+    <!--    Text size preset for every app element-->
+
+    <style name="PageTitle">
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="Paragraph_Secondary_Caption">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="ListTitle">
+        <item name="android:textSize">14sp</item>
+        <item name="fontWeight">550</item>
+    </style>
+    <style name="Button_Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="fontWeight">550</item>
+    </style>
+    <style name="TextInput_ListItemTitles_ImportantText_Snippet">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <!--    Text size preset for every app element-->
+
     <style name="TabLayoutStyle" parent="Widget.MaterialComponents.TabLayout">
         <item name="tabBackground">@color/primary</item>
         <item name="tabTextColor">@color/lightestGrey</item>
-        <item name="fontFamily">@font/montserratmedium</item>
-        <item name="android:textSize">10sp</item>
         <item name="tabSelectedTextColor">@color/white</item>
         <item name="tabIndicatorColor">@color/white</item>
-
     </style>
 
     <style name="Divider" parent="Theme.LearnGermany">

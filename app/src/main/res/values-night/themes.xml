@@ -14,7 +14,7 @@
         <item name="colorOnError">@color/black</item>
         <item name="colorError">@color/error</item>
         <item name="fontFamily">@font/montserratmedium</item>
-        <item name="android:statusBarColor">@color/lightGrey</item>
+        <item name="android:statusBarColor">@color/darkGrey</item>
     </style>
 
     <style name="TabLayoutStyle" parent="Widget.MaterialComponents.TabLayout">

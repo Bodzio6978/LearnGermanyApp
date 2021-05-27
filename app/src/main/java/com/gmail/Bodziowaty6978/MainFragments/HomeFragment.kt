@@ -29,15 +29,10 @@ class HomeFragment : Fragment() {
     private var titles = mutableListOf<String>()
     private var authors = mutableListOf<String>()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
         instance = FirebaseAuth.getInstance()
@@ -55,12 +50,11 @@ class HomeFragment : Fragment() {
     }
 
     private fun addQuizzes() {
-        authors.clear()
-        titles.clear()
         val followedRef = database.reference.child("followed_quizzes").child(userId)
-
         followedRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
+                authors.clear()
+                titles.clear()
                 for (data in snapshot.children) {
                     for (quiz in data.children) {
                         authors.add(data.key.toString())

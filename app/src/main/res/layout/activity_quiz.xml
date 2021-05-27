@@ -1,84 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".QuizActivity">
 
     <RelativeLayout
+        android:id="@+id/play_top_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/play_top_bar">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/play_english"
-            android:layout_marginStart="54dp"
+            style="@style/PageTitle"
             android:layout_width="match_parent"
-            android:layout_below="@+id/play_words_left"
-            android:textAlignment="center"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/play_words_left"
             android:layout_centerHorizontal="true"
+            android:layout_marginStart="54dp"
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
-            android:textColor="@color/text"
-            android:textSize="20sp" />
+            android:textAlignment="center"
+            android:textColor="@color/text" />
 
         <TextView
-
+            style="@style/Paragraph_Secondary_Caption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toStartOf="@+id/play_words_left"
-            android:text="Words left:"
-            android:textSize="16sp"
-            android:textColor="@color/text"
             android:padding="5dp"
-            />
+            android:text="@string/words_left"
+            android:textColor="@color/text" />
 
         <TextView
             android:id="@+id/play_words_left"
+            style="@style/Paragraph_Secondary_Caption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:textSize="16sp"
-            android:textColor="@color/text"
-            android:padding="5dp"/>
+            android:padding="5dp"
+            android:textColor="@color/text" />
 
         <Button
             android:id="@+id/play_exit"
+            style="@style/Button_Tab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="5dp"
-            android:paddingTop="5dp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:textSize="16sp"
-            android:text="Exit quiz"
             android:layout_below="@+id/play_english"
             android:layout_centerHorizontal="true"
-            android:visibility="gone"
+            android:layout_marginTop="30dp"
             android:background="@drawable/button"
-            android:layout_marginTop="30dp"/>
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:text="@string/exit_quiz"
+            android:visibility="gone" />
 
 
     </RelativeLayout>
 
     <EditText
         android:id="@+id/play_german"
+        style="@style/TextInput_ListItemTitles_ImportantText_Snippet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
         android:layout_below="@+id/play_top_bar"
-        android:background="@drawable/edit_text"
-        android:padding="10dp"
-        android:textSize="18sp"
-        android:elevation="8dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
-        android:textColor="@color/text"
-        android:hint="@string/play_hint"/>
-
-
+        android:layout_marginEnd="20dp"
+        android:autofillHints="no"
+        android:background="@drawable/edit_text"
+        android:elevation="8dp"
+        android:hint="@string/play_hint"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@color/text" />
 
 
     <LinearLayout
@@ -91,43 +88,43 @@
 
         <Button
             android:id="@+id/play_a"
+            style="@style/Button_Tab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:layout_marginEnd="2dp"
-            android:text="ä"
-            android:textAllCaps="false"
-            android:textSize="16sp" />
+            android:text="@string/a_lower"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/play_o"
+            style="@style/Button_Tab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:layout_marginEnd="2dp"
-            android:text="ö"
-            android:textAllCaps="false"
-            android:textSize="16sp" />
+            android:text="@string/o_lower"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/play_u"
+            style="@style/Button_Tab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:layout_marginEnd="2dp"
-            android:text="ü"
-            android:textAllCaps="false"
-            android:textSize="16sp" />
+            android:text="@string/u_lower"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/play_B"
+            style="@style/Button_Tab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:layout_marginEnd="2dp"
-            android:text="ß"
-            android:textAllCaps="false"
-            android:textSize="16sp" />
+            android:text="@string/B_lower"
+            android:textAllCaps="false" />
 
 
     </LinearLayout>
@@ -142,78 +139,82 @@
 
         <Button
             android:id="@+id/play_der"
+            style="@style/Button_Tab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:text="@string/der_lower"
-            android:textAllCaps="false"
-            android:textSize="16sp" />
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/play_die"
+            style="@style/Button_Tab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:text="@string/die_lower"
-            android:textAllCaps="false"
-            android:textSize="16sp" />
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/play_das"
+            style="@style/Button_Tab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:text="@string/das_lower"
-            android:textAllCaps="false"
-            android:textSize="16sp" />
+            android:textAllCaps="false" />
 
     </LinearLayout>
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/play_switch"
+        style="@style/Button_Tab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/play_derDieDas"
         android:layout_centerHorizontal="true"
-        android:hint="@string/play_upper" />
+        android:hint="@string/upper_case" />
 
     <ImageButton
         android:id="@+id/play_check"
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
         android:layout_alignTop="@+id/play_switch"
-        android:src="@drawable/ic_baseline_check_circle_48"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="15dp"
-        android:tint="@color/green"/>
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/check_word"
+        android:src="@drawable/ic_baseline_check_circle_48"
+        android:tint="@color/green"
+        android:visibility="gone" />
 
     <ImageButton
         android:id="@+id/play_next"
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
         android:layout_alignTop="@+id/play_switch"
-        android:src="@drawable/ic_baseline_play_circle_48"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="15dp"
-        android:tint="@color/primary"/>
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/next_word"
+        android:src="@drawable/ic_baseline_play_circle_48"
+        android:tint="@color/primary"
+        android:visibility="gone" />
 
     <ImageButton
         android:id="@+id/play_cancel"
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
         android:layout_alignTop="@+id/play_switch"
-        android:src="@drawable/ic_baseline_cancel_48"
-        android:layout_marginTop="5dp"
         android:layout_marginStart="15dp"
-        android:tint="@color/red"/>
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/cancel_word"
+        android:src="@drawable/ic_baseline_cancel_48"
+        android:tint="@color/red"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/play_notification"

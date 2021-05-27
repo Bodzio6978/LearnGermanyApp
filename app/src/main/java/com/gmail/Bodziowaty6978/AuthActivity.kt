@@ -3,19 +3,19 @@ package com.gmail.Bodziowaty6978
 import android.content.Context
 import android.content.res.Configuration
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
-import com.gmail.Bodziowaty6978.Adapters.viewPagerAdapter
+import com.gmail.Bodziowaty6978.Adapters.ViewPagerAdapter
 import com.gmail.Bodziowaty6978.AuthFragments.LoginFragment
 import com.gmail.Bodziowaty6978.AuthFragments.RegisterFragment
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 class AuthActivity : AppCompatActivity() {
-    lateinit var viewPager: ViewPager2
-    lateinit var tabLayout: TabLayout
+    private lateinit var viewPager: ViewPager2
+    private lateinit var tabLayout: TabLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +33,7 @@ class AuthActivity : AppCompatActivity() {
     }
 
     private fun setUpTabs() {
-        val adapter = viewPagerAdapter(this)
+        val adapter = ViewPagerAdapter(this)
         adapter.addFragment(LoginFragment(), "Sign In")
         adapter.addFragment(RegisterFragment(), "Sign Up")
         viewPager.adapter = adapter

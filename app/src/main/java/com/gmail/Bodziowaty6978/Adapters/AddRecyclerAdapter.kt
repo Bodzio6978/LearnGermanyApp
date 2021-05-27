@@ -19,7 +19,7 @@ class AddRecyclerAdapter(
 
         val englishWord: TextView = itemView.findViewById(R.id.word_english)
         val germanWord: TextView = itemView.findViewById(R.id.word_german)
-        val moreButton: ImageButton = itemView.findViewById(R.id.word_delete)
+        private val moreButton: ImageButton = itemView.findViewById(R.id.word_delete)
 
         init {
             moreButton.setOnClickListener {
